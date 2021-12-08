@@ -18,11 +18,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f6f7fb;
+
   font-family: 'Muli', sans-serif;
   font-size: 1.6rem;
-  overflow: hidden;
-  height: 100vh;
-  background-color: #f6f7fb;
 }
 
 .container {
@@ -30,49 +32,59 @@ body {
 }
 
 .progress-container {
-  position: relative;
   display: flex;
   justify-content: space-between;
-  max-width: 100%;
+
+  position: relative;
+
   width: 40rem;
+  max-width: 100%;
   margin-bottom: 3rem;
 }
 
 .progress-container::before {
   content: '';
+
   position: absolute;
-  height: 0.4rem;
-  width: 100%;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
+
+  height: 0.4rem;
+  width: 100%;
   z-index: -1;
   background-color: var(--line-border-empty);
+
+  transform: translateY(-50%);
   transition: 0.4s ease;
 }
 
 .progress {
   position: absolute;
-  height: 0.4rem;
-  width: 0%;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
+
+  height: 0.4rem;
+  width: 0%;
   z-index: -1;
   background-color: var(--line-border-fill);
+
+  transform: translateY(-50%);
 }
 
 .circle {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+
   height: 3rem;
   width: 3rem;
-  color: #999;
   border: 3px solid var(--line-border-empty);
   background-color: #fff;
+
+  color: #999;
+
   transition: 0.4s ease;
+  border-radius: 50%;
 }
 
 .circle.active {
