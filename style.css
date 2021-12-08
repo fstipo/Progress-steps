@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 :root {
+  --dark-clr: #999;
+  --light-clr: #fff;
+  --bg-clr: #f6f7fb;
+
   --line-border-fill: #3498db;
   --line-border-empty: #e0e0e0;
 }
@@ -21,7 +25,7 @@ body {
 
   height: 100vh;
   overflow: hidden;
-  background-color: #f6f7fb;
+  background-color: var(--bg-clr);
 
   font-family: 'Muli', sans-serif;
   font-size: 1.6rem;
@@ -79,11 +83,12 @@ body {
   height: 3rem;
   width: 3rem;
   border: 3px solid var(--line-border-empty);
-  background-color: #fff;
+  background-color: var(--light-clr);
 
-  color: #999;
+  color: var(--dark-clr);
 
   transition: 0.4s ease;
+
   border-radius: 50%;
 }
 
@@ -92,15 +97,18 @@ body {
 }
 
 .btn {
-  background-color: var(--line-border-fill);
-  font-family: inherit;
-  font-size: 1.4rem;
-  color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  cursor: pointer;
   padding: 0.8rem 3rem;
   margin: 0.5rem;
+
+  border: none;
+  background-color: var(--line-border-fill);
+
+  font-family: inherit;
+  font-size: 1.4rem;
+  color: var(--light-clr);
+
+  cursor: pointer;
+  border-radius: 0.6rem;
 }
 
 .btn:active {
